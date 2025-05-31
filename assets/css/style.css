@@ -1,0 +1,16 @@
+.standard_container {
+    width: 90%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+.footer-socials a img {
+    width: 25px;
+}
+
+.schedule_message {
+    font-size: 14px;
+    margin-left: 5px;
+}

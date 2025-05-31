@@ -1,0 +1,143 @@
+.nav-item .nav-link1 {
+    color: black;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.nav-item {
+    padding: 4px 20px;
+    border-radius: 20px;
+    transition: all linear 0.3s;
+}
+
+.nav-item.active {
+    background: #dcdad9;
+}
+
+.nav-item.active .nav-link1 {
+    color: #121212;
+    font-weight: 600;
+}
+
+/* .nav-item:hover {
+    background: #dcdad9;
+} */
+
+.nav-item:hover .nav-link1 {
+    color: #121212;
+    font-weight: 600;
+}
+
+.navbar-nav {
+    gap: 5px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-btn-mobile {
+    display: none;
+}
+
+.nav-btn-1 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    border: 1px solid #d60000;
+    color: #ffffff;
+    background-color: #d60000;
+    border-radius: 15px;
+    padding: 12px 14px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.main-nav-box {
+    padding: 1rem 0px;
+    background: white !important;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1024;
+    box-shadow: 0px 0px 50px -22px #000;
+}
+
+#nav-container {
+    max-width: 1280px;
+}
+
+.navbar-brand img {
+    width: 90px;
+}
+
+#number-mobile {
+    display: none;
+}
+
+#number-desktop {
+    display: block;
+}
+
+.hamburger-box {
+    display: flex;
+    gap: 10px;
+}
+
+.dropdown-item {
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+.dropdown-menu {
+    top: 100%;
+    left: 0;
+}
+
+@media only screen and (max-width: 992px) {
+    #number-mobile {
+        display: block;
+    }
+
+    #number-desktop {
+        display: none;
+    }
+
+    .navbar-nav {
+        position: relative;
+    }
+
+    .nav-btn-1 {
+        font-size: 14px;
+        letter-spacing: 0px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .nav-btn-1 {
+        font-size: 12px;
+        border-radius: 10px;
+        padding: 9px 10px;
+    }
+
+    .navbar-brand img {
+        width: 150px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .nav-btn-1 {
+        font-size: 9px;
+        border-radius: 6px;
+        padding: 9px 5px;
+    }
+
+    .navbar-brand img {
+        width: 135px;
+    }
+}
