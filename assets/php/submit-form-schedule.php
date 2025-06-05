@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->Port       = 587;
 
         $mail->setFrom('nicksautodetailingwebsiteform@gmail.com', 'Nicks Car Detailing');
-        $mail->addAddress('muhammadumair25591@gmail.com');
+        $mail->addAddress('access@sustain-media.com');
 
         $mail->isHTML(true);
         $mail->Subject = 'NEW Quote Request from Car Detailing Website';
