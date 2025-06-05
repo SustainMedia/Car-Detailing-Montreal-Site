@@ -7,6 +7,8 @@ require '../vendor/PHP-Mailer/src/Exception.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
+header('Content-Type: application/json');
+
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     http_response_code(200);
     exit;
@@ -14,14 +16,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    $name    = $_POST['name'] ?? '';
+    $service = $_POST['service'] ?? '';
     $address = $_POST['address'] ?? '';
+    $name    = $_POST['name'] ?? '';
     $email   = $_POST['email'] ?? '';
     $phone   = $_POST['phone'] ?? '';
-    $service = $_POST['service'] ?? '';
     $pageUrl = $_POST['page_url'] ?? 'Not provided';
 
-    if (empty($name) || empty($address) || empty($email) || empty($phone)) {
+    if (empty($name) || empty($address) || empty($email) || empty($phone) || empty($service)) {
         http_response_code(400);
         echo json_encode(['status' => 'error', 'message' => 'Please fill in all required fields.']);
         exit;
@@ -33,18 +35,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'groundsmenwebsiteform@gmail.com';
-        $mail->Password   = 'iojb txzq rxmi owhj';
+        $mail->Username   = 'nicksautodetailingwebsiteform@gmail.com';
+        $mail->Password   = 'fxjl tfrt ocqg yjfv';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
 
-        $mail->setFrom('groundsmenwebsiteform@gmail.com', 'Free Flow Plumbing Quote Request');
-        $mail->addAddress('Freeflowutah@gmail.com');
+        $mail->setFrom('nicksautodetailingwebsiteform@gmail.com', 'Nicks Car Detailing');
+        $mail->addAddress('muhammadumair25591@gmail.com');
 
         $mail->isHTML(true);
-        $mail->Subject = 'NEW Plumbing Quote Request from Free Flow Website';
+        $mail->Subject = 'NEW Quote Request from Car Detailing Website';
         $mail->Body    = "
-            <h2>Plumbing Quote Request : Schedule Form Submission</h2>
+            <h2>Car Detailing Quote Request : Schedule Form Submission</h2>
             <p><strong>Name:</strong> {$name}</p>
             <p><strong>Address:</strong> {$address}</p>
             <p><strong>Email:</strong> {$email}</p>
