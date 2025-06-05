@@ -14,3 +14,19 @@
     font-size: 14px;
     margin-left: 5px;
 }
+
+.main-content {
+    padding-top: 122.24px;
+}
+
+@media only screen and (max-width: 500px) {
+    .main-content {
+        padding-top: 108.88px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .main-content {
+        padding-top: 104.42px;
+    }
+}
