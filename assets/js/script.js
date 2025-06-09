@@ -114,3 +114,20 @@ $(document).ready(function() {
     });
 });
 
+
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollButtons = document.querySelectorAll('.js-scroll-trigger');
+
+    scrollButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const targetSelector = button.dataset.target;
+            const targetElement = document.querySelector(targetSelector);
+
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                console.warn(`Target element not found for selector: ${targetSelector}`);
+            }
+        });
+    });
+});
